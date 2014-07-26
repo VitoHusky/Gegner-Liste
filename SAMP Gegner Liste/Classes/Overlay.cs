@@ -20,7 +20,7 @@ namespace SAMP_Gegner_Liste
         }
         public void Update()
         {
-            string EnemyStr = "=== {FFAAAA} Gegner Online {FFFFFF} ===";
+            string EnemyStr = "=== Gegner Online ===";
             if (OverlayID == -1)
             {
                 DX9Overlay.SetParam("use_window", "1");
