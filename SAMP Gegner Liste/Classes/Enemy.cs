@@ -11,7 +11,7 @@ namespace SAMP_Gegner_Liste
         public string Username = "";
         public string Reason = "";
         public int TimesKilled = 0;
-        public int UserID = 0;
+        public int UserID = -1;
 
         public Enemy(string name, string reason, int timeskilled)
         {
