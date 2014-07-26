@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -52,73 +53,52 @@
             this.label11 = new System.Windows.Forms.Label();
             this.TB_REM_User = new System.Windows.Forms.TextBox();
             this.BTN_AddEnemy = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Abel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "SAMP Gegner Liste by Valente (Sys-dev.de)";
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(142, 71);
-            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "GTA Prozess";
             // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
+            resources.ApplyResources(this.radioButton2, "radioButton2");
             this.radioButton2.BackColor = System.Drawing.SystemColors.Control;
-            this.radioButton2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(6, 42);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(50, 20);
-            this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "RGN";
             this.radioButton2.UseVisualStyleBackColor = false;
             // 
             // radioButton1
             // 
-            this.radioButton1.AutoSize = true;
+            resources.ApplyResources(this.radioButton1, "radioButton1");
             this.radioButton1.BackColor = System.Drawing.SystemColors.Control;
-            this.radioButton1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 20);
-            this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "GTA standard";
             this.radioButton1.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
+            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(178, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 71);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Starten";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
@@ -126,79 +106,44 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(22, 116);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(262, 70);
-            this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Ingame Befehle";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            resources.ApplyResources(this.label6, "label6");
             this.label6.BackColor = System.Drawing.SystemColors.Control;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(103, 48);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "= Overlay anzeigen / verbergen";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
+            resources.ApplyResources(this.label7, "label7");
             this.label7.BackColor = System.Drawing.SystemColors.Control;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "/showgegner";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
+            resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(103, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "= Gegner löschen";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
+            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 16);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "/remgegner";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
+            resources.ApplyResources(this.label3, "label3");
             this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(102, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "= Gegner hinzufügen";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "/addgegner";
             // 
             // MainCheckTimer
             // 
@@ -208,103 +153,75 @@
             // 
             // listBox1
             // 
+            resources.ApplyResources(this.listBox1, "listBox1");
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(306, 39);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(134, 147);
-            this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
+            resources.ApplyResources(this.label8, "label8");
             this.label8.BackColor = System.Drawing.SystemColors.Control;
-            this.label8.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(303, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 16);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Aktuelle Gegner";
             // 
             // TB_Add_Reason
             // 
-            this.TB_Add_Reason.Location = new System.Drawing.Point(509, 65);
+            resources.ApplyResources(this.TB_Add_Reason, "TB_Add_Reason");
             this.TB_Add_Reason.Name = "TB_Add_Reason";
-            this.TB_Add_Reason.Size = new System.Drawing.Size(100, 20);
-            this.TB_Add_Reason.TabIndex = 7;
             // 
             // TB_Add_User
             // 
-            this.TB_Add_User.Location = new System.Drawing.Point(509, 39);
+            resources.ApplyResources(this.TB_Add_User, "TB_Add_User");
             this.TB_Add_User.Name = "TB_Add_User";
-            this.TB_Add_User.Size = new System.Drawing.Size(100, 20);
-            this.TB_Add_User.TabIndex = 8;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
+            resources.ApplyResources(this.label9, "label9");
             this.label9.BackColor = System.Drawing.SystemColors.Control;
-            this.label9.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(446, 39);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 16);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Username";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
+            resources.ApplyResources(this.label10, "label10");
             this.label10.BackColor = System.Drawing.SystemColors.Control;
-            this.label10.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(465, 66);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 16);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Grund";
             // 
             // BTN_RemoveEnemy
             // 
-            this.BTN_RemoveEnemy.Location = new System.Drawing.Point(449, 161);
+            resources.ApplyResources(this.BTN_RemoveEnemy, "BTN_RemoveEnemy");
             this.BTN_RemoveEnemy.Name = "BTN_RemoveEnemy";
-            this.BTN_RemoveEnemy.Size = new System.Drawing.Size(160, 23);
-            this.BTN_RemoveEnemy.TabIndex = 12;
-            this.BTN_RemoveEnemy.Text = "Entfernen";
             this.BTN_RemoveEnemy.UseVisualStyleBackColor = true;
             this.BTN_RemoveEnemy.Click += new System.EventHandler(this.BTN_RemoveEnemy_Click);
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
+            resources.ApplyResources(this.label11, "label11");
             this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(446, 135);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 16);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Username";
             // 
             // TB_REM_User
             // 
-            this.TB_REM_User.Location = new System.Drawing.Point(509, 135);
+            resources.ApplyResources(this.TB_REM_User, "TB_REM_User");
             this.TB_REM_User.Name = "TB_REM_User";
-            this.TB_REM_User.Size = new System.Drawing.Size(100, 20);
-            this.TB_REM_User.TabIndex = 13;
             // 
             // BTN_AddEnemy
             // 
-            this.BTN_AddEnemy.Location = new System.Drawing.Point(446, 91);
+            resources.ApplyResources(this.BTN_AddEnemy, "BTN_AddEnemy");
             this.BTN_AddEnemy.Name = "BTN_AddEnemy";
-            this.BTN_AddEnemy.Size = new System.Drawing.Size(163, 23);
-            this.BTN_AddEnemy.TabIndex = 15;
-            this.BTN_AddEnemy.Text = "Hinzufügen";
             this.BTN_AddEnemy.UseVisualStyleBackColor = true;
             this.BTN_AddEnemy.Click += new System.EventHandler(this.BTN_AddEnemy_Click);
             // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 199);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.BTN_AddEnemy);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.TB_REM_User);
@@ -319,8 +236,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
-            this.Text = "[SAMP] Gegnerliste";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.groupBox1.ResumeLayout(false);
@@ -357,6 +274,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TB_REM_User;
         private System.Windows.Forms.Button BTN_AddEnemy;
+        private System.Windows.Forms.CheckBox checkBox1;
 
     }
 }

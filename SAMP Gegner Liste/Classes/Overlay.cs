@@ -18,37 +18,53 @@ namespace SAMP_Gegner_Liste
             }
             return instance;
         }
-        public void Update()
+        public void Update(bool showReason)
         {
             string EnemyStr = "=== Gegner Online ===";
             if (OverlayID == -1)
             {
                 DX9Overlay.SetParam("use_window", "1");
                 DX9Overlay.SetParam("window", "GTA:SA:MP");
-                OverlayID = DX9Overlay.TextCreate("Arial", 6, true, false, 5, 200, 0xFFFFAAAA, EnemyStr, false, true);
+                OverlayID = DX9Overlay.TextCreate("Arial", 6, true, false, 5, 200, 0xFFFF3333, EnemyStr, false, true);
             }
             else
             {
                 bool first = true;
-                int count = 0;
-                
+                List<Enemy> EnemyCopy = new List<Enemy>();
+
+
                 foreach (Enemy enemy in EnemyManager.GetInstance().GetEnemies())
                 {
                     int id = shadowAPI2.RemotePlayer.GetInstance().GetPlayerIdByName(enemy.Username, first);
                     if (id != -1)
                     {
+                        EnemyCopy.Add(new Enemy(enemy, id));
+                    }
+                }
+                
+                if (EnemyCopy.Count == 0)
+                {
+                    EnemyStr += "\n{BBBBBB}Keine Gegner online.";
+                }
+                else
+                {
+                    int count = 0;
+                    List<Enemy> SortedEnemies = EnemyCopy.OrderBy(o => o.UserID).ToList();
+                    foreach (Enemy enemy in SortedEnemies)
+                    {
                         EnemyStr += "\n";
                         count++;
                         if (count % 2 == 0)
-                            EnemyStr += "{BBBBBB}";
+                            EnemyStr += "{BFBFBF}";
                         else
-                            EnemyStr += "{AFAFAF}";
-                        EnemyStr += "[" + id + "] " + enemy.Username;
+                            EnemyStr += "{EFEFEF}";
+                        EnemyStr += "[" + enemy.UserID + "] " + enemy.Username;
+                        if (showReason)
+                        {
+                            EnemyStr += "(" + enemy.Reason + ")";
+                        }
                     }
-                }
-                if (count == 0)
-                {
-                    EnemyStr += "\n{BBBBBB}Keine Gegner online.";
+                    EnemyStr += "\n{FF3333}Es sind " + count + " Gegner online.";
                 }
                 DX9Overlay.TextSetString(OverlayID, EnemyStr);
             }

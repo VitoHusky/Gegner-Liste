@@ -14,6 +14,7 @@ namespace SAMP_Gegner_Liste
     {
         private List<Enemy> enemies = new List<Enemy>();
         private string processName = "";
+        private bool ShowEnemyReason = false;
         private IniFile settings = null;
 
         public MainWindow()
@@ -44,7 +45,12 @@ namespace SAMP_Gegner_Liste
             EnemyManager.GetInstance().LoadFromFile();
             this.UpdateList();
 
+
             processName = settings.IniReadValue("Main", "ProcessName");
+            if (settings.IniReadValue("Main", "ShowReason").Equals("1"))
+            {
+                this.ShowEnemyReason = true;
+            }
 
             if (processName.Equals("rgn_ac_gta"))
             {
@@ -71,7 +77,7 @@ namespace SAMP_Gegner_Liste
             }
             else
             {
-                Overlay.GetInstance().Update();
+                Overlay.GetInstance().Update(this.ShowEnemyReason);
             }
         }
 
@@ -98,6 +104,11 @@ namespace SAMP_Gegner_Liste
                 GTA.GTAProcessName = processName;
                 shadowAPI2.API.Init(processName);
             }
+
+            if (checkBox1.Checked)
+                settings.IniWriteValue("Main", "ShowREason", "1");
+            else
+                settings.IniWriteValue("Main", "ShowREason", "0");
             button1.Enabled = true;
         }
 
